@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Predict Indian Human Migration</title>
+    <link rel="stylesheet" type='text/css' href="{{ url_for('static',filename='style.css') }}">
+    <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <!--Website Title -->
+    <div class="container">
+      <h2 class='container-heading'><span class="heading_font">Predict Indian </span>Human Migration</h2>
+      <br>
+    </div>
+
+    <!--Text Area -->
+    <div class="ml-container">
+      <form action="{{ url_for('predict') }}" method="POST">
+        <label for="gender">Enter the Gender:</label>
+        <select name="Gender">
+          <option value="Female">Female</option>
+          <option value="Male">Male</option>
+        </select>
+        <br><br>
+        <input type="text" name="Last2" placeholder="Enter the before last year migration">
+        <br><br>
+        <input type="text" name="Last1" placeholder="Enter the last year migration">
+        <br><br>
+        <label for="Country">Enter the Destination Country:</label>
+        <select name="Country">
+          <option value="Afghanistan">Afghanistan</option>
+          <option value="Albania">Albania</option>
+          <option value="Algeria">Algeria</option>
+          <option value="Australia">Australia</option>
+          <option value="Austria">Austria</option>
+          <option value="Bangladesh">Bangladesh</option>
+          <option value="Belgium">Belgium</option>
+          <option value="Bhutan">Bhutan</option>
+          <option value="Brazil">Brazil</option>
+          <option value="Bulgaria">Bulgaria</option>
+          <option value="Canada">Canada</option>
+          <option value="China">China</option>
+          <option value="Colombia">Colombia</option>
+          <option value="Congo, Dem. Rep.">Congo, Dem. Rep.</option>
+          <option value="Costa Rica">Costa Rica</option>
+          <option value="Denmark">Denmark</option>
+          <option value="Egypt, Arab Rep.">Egypt, Arab Rep.</option>
+          <option value="Equatorial Guinea">Equatorial Guinea</option>
+          <option value="Ethiopia">Ethiopia</option>
+          <option value="Finland">Finland</option>
+          <option value="France">France</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Germany">Germany</option>
+          <option value="Ghana">Ghana</option>
+          <option value="Greece">Greece</option>
+          <option value="Greenland">Greenland</option>
+          <option value="Hong Kong SAR, China">Hong Kong SAR, China</option>
+          <option value="Hungary">Hungary</option>
+          <option value="Indonesia">Indonesia</option>
+          <option value="Iran, Islamic Rep.">Iran, Islamic Rep.</option>
+          <option value="Iraq">Iraq</option>
+          <option value="Jamaica">Jamaica</option>
+          <option value="Japan">Japan</option>
+          <option value="Jordan">Jordan</option>
+          <option value="Kenya">Kenya</option>
+          <option value="Korea, Dem. Rep.">Korea, Dem. Rep.</option>
+          <option value="Kuwait">Kuwait</option>
+          <option value="Libya">Libya</option>
+          <option value="Macedonia, FYR">Macedonia, FYR</option>
+          <option value="Madagascar">Madagascar</option>
+          <option value="Malaysia">Malaysia</option>
+          <option value="Maldives">Maldives</option>
+          <option value="Morocco">Morocco</option>
+          <option value="Myanmar">Myanmar</option>
+          <option value="Nepal">Nepal</option>
+          <option value="Netherlands">Netherlands</option>
+          <option value="New Zealand">New Zealand</option>
+          <option value="Nigeria">Nigeria</option>
+          <option value="Norway">Norway</option>
+          <option value="Oman">Oman</option>
+          <option value="Pakistan">Pakistan</option>
+          <option value="Paraguay">Paraguay</option>
+          <option value="Philippines">Philippines</option>
+          <option value="Portugal">Portugal</option>
+          <option value="Qatar">Qatar</option>
+          <option value="Romania">Romania</option>
+          <option value="Russian Federation">Russian Federation</option>
+          <option value="Rwanda">Rwanda</option>
+          <option value="Saudi Arabia">Saudi Arabia</option>
+          <option value="Seychelles">Seychelles</option>
+          <option value="Singapore">Singapore</option>
+          <option value="South Africa">South Africa</option>
+          <option value="Spain">Spain</option>
+          <option value="Sri Lanka">Sri Lanka</option>
+          <option value="Sudan">Sudan</option>
+          <option value="Sweden">Sweden</option>
+          <option value="Switzerland">Switzerland</option>
+          <option value="Tanzania">Tanzania</option>
+          <option value="Thailand">Thailand</option>
+          <option value="Uganda">Uganda</option>
+          <option value="United Arab Emirates">United Arab Emirates</option>
+          <option value="United Kingdom">United Kingdom</option>
+          <option value="United States">United States</option>
+          <option value="Vietnam">Vietnam</option>
+          <option value="Yemen, Rep.">Yemen, Rep.</option>
+          <option value="Zambia">Zambia</option>
+          <option value="Zimbabwe">Zimbabwe</option>
+        </select>
+        <br><br>
+        <input type="submit" class="my-cta-button" value="Predict">
+      </form>
+      <br>
+      <br>
+
+      {{ prediction_text }}
+
+    </div>
+    </body>
+    </html>
