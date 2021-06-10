@@ -1,0 +1,20 @@
+#opa{
+  background-color:rgba(0,0,0,0.5);  
+}
+
+.my-cta-button {
+  background-color: #008CBA; color: black; /* Green */
+  border: none;
+  padding: 15px 32px;
+  font: italic bold 20px/1 "Calibri", sans-serif;
+  text-align: center;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+}
+.box {
+  background-image: url(../static/image.jpg);
+  padding: 100px;
+  margin: 100px;
+}
